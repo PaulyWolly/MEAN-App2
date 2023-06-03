@@ -1,0 +1,37 @@
+<mat-card class="padding-28b">
+  <main>
+    <p>New Post</p>
+  <div class="container mb-4">
+    <mat-form-field>
+      <input
+        matInput
+        title="title"
+        type="text"
+        [(ngModel)]="enteredTitle"
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        title="textarea"
+        rows="6"
+        width="50%"
+        matInput
+
+        [(ngModel)]="enteredContent"
+      ></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" class="btn btn-sm" (click)="onAddPost()">Save Post</button>
+
+ </div>
+
+ <!-- <div class="center-obj">
+  <app-post-list [posts]="storedPosts"></app-post-list>
+</div> -->
+
+ </main>
+
+</mat-card>
+
+
+

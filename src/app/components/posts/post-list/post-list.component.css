@@ -1,0 +1,11 @@
+mat-accordian, mat-expansion-panel {
+  width: 80% !important;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+:host {
+  margin-top: 20px;
+  margin: auto;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+textarea, mat-form-field {
+  width: 100%;
+  margin: auto;
+  padding-right: 30px;
+}
+
+/* main {
+  margin-top: 1rem;
+} */
+
+.center-obj, app-post-list {
+  padding-top: 10px;
+  margin: auto !important;
+  text-align: center;
+}
+
+mat-card {
+  width: 80%;
+  margin: auto;
+}
