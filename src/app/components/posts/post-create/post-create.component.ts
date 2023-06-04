@@ -23,6 +23,7 @@ export class PostCreateComponent {
     }
 
     const post: PostInterface = {
+      id: null,
       title: form.value.title,
       content: form.value.content
     }
