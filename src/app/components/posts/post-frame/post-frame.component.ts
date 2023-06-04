@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PostInterface } from 'src/app/models/post.interface';
+// import { PostInterface } from 'src/app/models/post.interface';
 
 @Component({
   selector: 'app-post-frame',
@@ -7,9 +7,9 @@ import { PostInterface } from 'src/app/models/post.interface';
   styleUrls: ['./post-frame.component.css']
 })
 export class PostFrameComponent {
-  storedPosts: PostInterface[] = [];
+  // storedPosts: PostInterface[] = [];
 
-  onPostAdded(post) {
-    this.storedPosts.push(post)
-  }
+  // onPostAdded(post) {
+  //   this.storedPosts.push(post)
+  // }
 }

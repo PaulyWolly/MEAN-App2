@@ -1,36 +1,54 @@
 <mat-card class="padding-28b">
-  <main>
-    <p>New Post</p>
-  <div class="container mb-4">
-    <mat-form-field>
-      <input
-        matInput
-        title="title"
-        name="title"
-        type="text"
-        [(ngModel)]="enteredTitle"
-      >
-    </mat-form-field>
-    <mat-form-field>
-      <textarea
-        title="textarea"
-        rows="6"
-        width="50%"
-        matInput
-        name="content"
-        [(ngModel)]="enteredContent"
-      ></textarea>
-    </mat-form-field>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+      <main>
+      <p>New Post</p>
+    <div class="container mb-4">
+      <mat-form-field>
+        <mat-label>Post Title</mat-label>
+        <input
+          matInput
+          title="title"
+          name="title"
+          type="text"
+          ngModel
+          required
+          #title="ngModel"
+          minlength="3"
+        >
+        <mat-error *ngIf="title.invalid">Please enter a post title</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Post Content</mat-label>
+        <textarea
+          title="textarea"
+          rows="4"
+          width="50%"
+          matInput
+          name="content"
+          ngModel
+          #content="ngModel"
+          required
+        ></textarea>
+        <mat-error *ngIf="content.invalid">Please enter content</mat-error>
+      </mat-form-field>
 
-    <button mat-raised-button color="accent" class="btn btn-sm" (click)="onAddPost()">Save Post</button>
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        class="btn btn-sm"
 
- </div>
+      >Save Post</button>
 
- <!-- <div class="center-obj">
-  <app-post-list [posts]="storedPosts"></app-post-list>
-</div> -->
+    </div>
 
- </main>
+  <!-- <div class="center-obj">
+    <app-post-list [posts]="storedPosts"></app-post-list>
+  </div> -->
+
+  </main>
+  </form>
+
 
 </mat-card>
 

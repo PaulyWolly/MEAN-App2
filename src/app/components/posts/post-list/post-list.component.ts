@@ -1,13 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { PostInterface } from 'src/app/models/post.interface';
+import { PostsService } from '../posts.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css']
 })
-export class PostListComponent {
+export class PostListComponent implements OnInit, OnDestroy {
 
   // posts = [
   //   {
@@ -24,10 +26,26 @@ export class PostListComponent {
   //   }
   // ]
 
-  @Input() posts:PostInterface[] = [];
+  posts:PostInterface[] = [];
+  postsService: PostsService
+  private postsSub: Subscription;
+
+  constructor( public postService: PostsService ) {}
+
+  ngOnInit(): void {
+      this.posts = this.postService.getPosts();
+      this.postsSub = this.postService.getPostUpdateListener()
+        .subscribe((posts: PostInterface[]) => {
+          this.posts = posts;
+        });
+  }
 
   onAction() {
     alert('you click for an action: ');
+  }
+
+  ngOnDestroy(): void {
+    this.postsSub.unsubscribe();
   }
 
 }
