@@ -5,7 +5,10 @@ mat-accordian, mat-expansion-panel {
 }
 
 :host {
-  margin-top: 20px;
+  margin-top: 120px;
   margin: auto;
   text-align: center;
+
+  position: relative;
+  top: 100px;
 }

@@ -1,5 +1,6 @@
 <mat-card >
-  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+  <div class="create-style">
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm">
       <main>
       <p style="margin-left: 14px;font-size: 20px;">New Post</p>
     <div class="container mb-4">
@@ -10,7 +11,7 @@
           title="title"
           name="title"
           type="text"
-          ngModel
+          [ngModel]="post?.title"
           required
           #title="ngModel"
           minlength="3"
@@ -25,7 +26,7 @@
           width="50%"
           matInput
           name="content"
-          ngModel
+          [ngModel]="post?.content"
           #content="ngModel"
           required
         ></textarea>
@@ -48,7 +49,7 @@
 
   </main>
   </form>
-
+</div>
 
 </mat-card>
 
