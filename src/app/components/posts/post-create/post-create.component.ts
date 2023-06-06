@@ -18,7 +18,7 @@ export class PostCreateComponent implements OnInit {
   isLoading = false;
   form: FormGroup;
   imagePreview: string;
-  private mode = "create";
+  public mode = "create";
   private postId: string;
 
   constructor(
@@ -44,6 +44,7 @@ export class PostCreateComponent implements OnInit {
         this.isLoading = true;
         this.postsService.getPost(this.postId).subscribe(postData => {
           this.isLoading = false;
+          this.imagePreview = postData.imagePath;
           this.post = {
             id: postData._id,
             title: postData.title,
