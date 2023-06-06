@@ -156,6 +156,18 @@
              [routerLink]="['/about']"
              [routerLinkActive]="['active']">About</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             (click)="setUserValue()"
+             [routerLink]="['/list']"
+             [routerLinkActive]="['active']">Posts List</a>
+        </li>
+        <li class="spacer">
+          <a class="nav-link"
+            (click)="hideButton()"
+             [routerLink]="['/create']"
+             [routerLinkActive]="['active']">New Post</a>
+        </li>
 
 
         <!-- <li class="nav-item dropdown">
@@ -191,12 +203,12 @@
         </li> -->
 
         <!-- Seperator -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link2 separator"></a>
         </li>
 
-        <!-- Dropdown [dark] -->
-        <li class="nav-item dropdown">
+         Dropdown [dark] -->
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" (click)="setBlankValue()" href="#" data-bs-toggle="dropdown" aria-expanded="false">Posts</a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li class="nav-item">
@@ -210,13 +222,8 @@
                  (click)="setPostValue()"
                  [routerLink]="['/create']"
                  [routerLinkActive]="['active']">Create</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                 (click)="setUserValue()"
-                 [routerLink]="['/list']"
-                 [routerLinkActive]="['active']">List</a>
-            </li>
+            </li> -->
+
             <!--
             <li class="nav-item">
               <a class="nav-link"
@@ -224,8 +231,8 @@
                  [routerLink]="['/products']"
                  [routerLinkActive]="['active']">Products</a>
             </li> -->
-          </ul>
-        </li>
+          <!-- </ul>
+        </li> -->
 
       </ul>
 

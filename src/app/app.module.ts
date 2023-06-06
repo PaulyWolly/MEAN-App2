@@ -8,7 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostCreateComponent } from './components/posts/post-create/post-create.component';
 
 import { MatInputModule } from '@angular/material/input';
@@ -17,7 +17,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { PostListComponent } from './components/posts/post-list/post-list.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { PostFrameComponent } from './components/posts/post-frame/post-frame.component';
+
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -26,20 +28,22 @@ import { PostFrameComponent } from './components/posts/post-frame/post-frame.com
     HeaderComponent,
     FooterComponent,
     PostCreateComponent,
-    PostListComponent,
-    PostFrameComponent
+    PostListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
