@@ -205,3 +205,15 @@ body {
   right: 10px;
   float: right;
 }
+
+.spacer-login {
+  position: absolute;
+  right: 100px;
+  float: right;
+}
+
+.spacer-signup {
+  position: absolute;
+  right: 165px;
+  float: right;
+}

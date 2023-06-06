@@ -5,8 +5,10 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { InitComponent } from './components/init/init.component';
 import { PostCreateComponent } from './components/posts/post-create/post-create.component';
-// import { PostFrameComponent } from './components/posts/post-frame/post-frame.component';
+
 import { PostListComponent } from './components/posts/post-list/post-list.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
 
 
 const routes: Routes = [
@@ -33,6 +35,14 @@ const routes: Routes = [
   {
     path: 'edit/:postId',
     component: PostCreateComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
   }
 ];
 

@@ -5,6 +5,12 @@
   margin-top: 1rem;
   width: 80%;
   margin: auto;
+
+}
+
+
+mat-card {
+  padding: 20px;
 }
 
 mat-form-field,
